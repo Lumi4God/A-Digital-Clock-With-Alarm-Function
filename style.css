@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+html, body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #000;
+}
+/****************************CLOCK AREA*******************************/
+.mother{
+    height: 400px;
+    width: 660px;
+    /* border-radius: 10px; */
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    animation: animate 1.5s linear infinite;
+}
+/*Title*/
+h1{
+    color: #fffdff;
+    text-align: center;
+    box-shadow: inset -3px -3px 5px rgba(255, 255, 255, 0.8),
+    inset 3px 3px 7px rgba(255, 255, 255, 0.8);
+    position: relative;
+    top: -40px;
+}
+.child{    
+    z-index: 1;
+    background: #1b1b1b;
+    height: 350px;
+    width: 610px;
+    text-align: center;
+    border-radius: 6px;
+}
+#time{
+    line-height: 350px;
+    font-size: 100px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+}
+@keyframes animate {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+/* Span area */
+.child, span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}    
+span{
+    height: 100%;
+    width: 100%;
+    background: inherit;
+}
+span:first-child{
+    filter: blur(10px)
+}
+span:last-child{
+    filter: blur(20px)
+}
+/* message */
+h3{
+    font-size: 40px;
+    color: #00ff2a;
+    animation: function 5s linear infinite;
+}
+@keyframes function {
+    0%, 18%, 20%, 50.1%, 60%, 65.1%,  80%, 90.1%, 92%{
+        /* color: #0e3742;
+        text-shadow: none; */
+        color: #fff;
+        text-shadow: 0 0 10px #00ff2a,
+        0 0 20px #00ff2a,
+        0 0 40px #00ff2a,
+        0 0 80px #00ff2a,
+        0 0 120px #00ff2a;
+    }
+    18.1%, 20.1%,30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%{
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4;
+    }
+}
+
+/******************************ALARM AREA***********************************/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/**************ALARM BUTTON****************/
+.controls {
+    margin-top: 16px;
+}
+
+.button {
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.set-alarm {
+    background-color: #498AFB;
+}
+
+.clear-alarm {
+    background-color: #FF3860;
+}
+
+/*****************************************************************************/
+footer{
+    color: white;
+    font-size: 20px;
+    box-shadow: inset -3px -3px 5px rgba(255, 255, 255, 0.8),
+    inset 3px 3px 7px rgba(255, 255, 255, 0.8);
+    position: relative;
+    bottom: -10px;
+}

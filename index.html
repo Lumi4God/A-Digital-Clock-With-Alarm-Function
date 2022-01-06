@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Digital Clock </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mother">
+        <h1>Have a Nice Time: by Lumicode</h1>
+
+        <div class="child">
+            <div id="time">12:00:00</div>
+        </div>
+    
+        <span></span>
+        <span></span>
+        
+    </div>  
+
+    <h3 id="message">Good day</h3>
+
+    <!--------------------------------------------------->
+    <section class="container">
+        <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local">
+        <div class="controls">
+            <button onclick="setAlarm()" class="button set-alarm">Set alarm</button>
+            <button onclick="clearAlarm()" class="button clear-alarm">Clear alarm</button>
+        </div>
+    </section>
+
+
+    <footer>Copyright: LumiCode</footer>
+  
+<script src="script.js"></script>
+
+</body>
+</html>
